@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    chunkFilename: '[id].js',
     publicPath: ''
   },
   resolve: {
@@ -27,7 +28,7 @@ module.exports = {
           { 
             loader: 'css-loader',
             options: {
-              importLoader: 1,
+              // importLoader: 1,
               modules: true,
               localIdentName: '[name]__[local]__[hash:base64:5]'
             }
